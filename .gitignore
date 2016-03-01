@@ -1,0 +1,9 @@
+# ignore src folder
+src/
+
+# ignore zip & rar
+*.zip
+*.rar
+
+# npm files
+node_modules/
