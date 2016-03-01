@@ -30,7 +30,7 @@ gulp.task('browserSync', function() {
 });
 
 gulp.task('sass', function() {
-        gulp.src('./inc/sass/main.scss')
+        gulp.src('./inc/sass/*.scss')
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'compressed' }))

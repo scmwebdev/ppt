@@ -27,8 +27,19 @@ html, body {
 
 }
 
+// overwrite the content-area default css for fullwidth layout
 .content-area {
 	float: none;
 	margin-right: 0;
 	width: 100%;
+}
+
+// change the site title color 
+.site-branding .site-title a {
+	color: $color-1;
+}
+
+// hide site desc for now
+.site-description {
+	display: none;
 }
