@@ -12,27 +12,23 @@ get_header(); ?>
 		<div class="mainbanner">
 			<?php responsiveBanner(); ?>	
 		</div>
-		<?php 
-			if ( is_front_page() ) { 
-				// set up or arguments for our custom query
-				$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-				$query_args = array(
+		<div class="testimonial">
+			<div class="container">
+			<?php
+				$args = array (
 					'post_type' => 'post',
-					'category_name' => 'testimonial'
-					'posts_per_page' => 5,
-					'paged' => $paged
+				    'category_name' => 'testimonial',
+				    'posts_per_page' => 1
 				);
-				// create a new instance of WP_Query
-				$the_query = new WP_Query( $query_args );
-			?>
-			<div class="testimonial">
-				<div class="container">
-					<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();  ?>
-			  			<?php get_template_part( 'template-parts/partial', 'testimonial' ); ?>
+				$the_query = new WP_Query($args); ?>
+
+				<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+					  <?php get_template_part( 'template-parts/partial', 'testimonial' ); ?>
 					<?php endwhile; ?>
-				</div>
+					<?php wp_reset_query(); ?>
+				<?php endif; ?>
 			</div>
-			<?php } ?>
+		</div>
 	</main><!-- .site-main -->
 </div><!-- .content-area -->
 <?php get_footer(); ?>
