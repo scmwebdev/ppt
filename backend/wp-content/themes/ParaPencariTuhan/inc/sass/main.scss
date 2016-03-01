@@ -13,7 +13,8 @@ Updated: 2016-02-20 06:41:49
 @import '../../node_modules/slick-carousel/slick/slick.scss';
 
 /* import animate.scss */
-@import '../../node_modules/animate.scss/vendor/assets/stylesheets/animate.scss';
+// @import '../../node_modules/animate.scss/vendor/assets/stylesheets/animate.scss';
+@import 'vendor/animate';
 
 /* import the variables */
 @import 'variables';

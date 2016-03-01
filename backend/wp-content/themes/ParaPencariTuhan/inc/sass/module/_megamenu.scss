@@ -4,12 +4,13 @@
 
 .main-navigation a {
     color: $color-1;
+    border-bottom: 2px solid #fff; 
     &:hover {
         text-decoration: none;
         color: $color-2;
+		
         @include breakpoint('sm') {
             border-bottom: 2px solid $color-2;
-            display: block;
         }
     }
 }
