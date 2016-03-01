@@ -9,6 +9,7 @@
   "author": "gamal",
   "license": "ISC",
   "devDependencies": {
+    "animate.scss": "0.0.6",
     "browser-sync": "^2.11.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",

@@ -8,6 +8,11 @@ html, body {
     font-size: 12pt;
 }
 
+// prevent border to add width
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 .site {
 	margin: 0; // remove margin from site
 	
