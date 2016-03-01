@@ -31,7 +31,8 @@ gulp.task('browserSync', function() {
 gulp.task('sass', function() {
     return gulp.src([
             './inc/sass/main.scss',
-            './node_modules/bootstrap-sass/assets/stylesheets/bootstrap.scss'
+            './node_modules/bootstrap-sass/assets/stylesheets/bootstrap.scss',
+            './node_modules/slick-carousel/slick/slick.scss'
         ])
         .pipe(plumber())
         .pipe(sourcemaps.init())
@@ -46,8 +47,8 @@ gulp.task('sass', function() {
 gulp.task('js', function() {
     return gulp.src([
             './node_modules/jquery/dist/jquery.min.js',
-            './inc/js/slick.js',
-            './inc/js/main.js',
+            './node_modules/slick-carousel/slick/slick.min.js',
+            './inc/js/main.js'
         ])
         .pipe(concat('main.js'))
         .pipe(gulp.dest('./'))
@@ -55,7 +56,7 @@ gulp.task('js', function() {
 });
 
 
-gulp.task('serve', ['sass', 'js', 'browserSync'], function() {
+gulp.task('default', ['sass', 'js', 'browserSync'], function() {
     gulp.watch('./inc/sass/**/*.scss', ['sass']);
     gulp.watch('./inc/sass/*.scss', ['sass']);
     gulp.watch('./inc/js/*.js', ['js']);
