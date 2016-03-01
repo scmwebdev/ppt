@@ -44,7 +44,10 @@ body {
 
 // change the site title color 
 .site-branding .site-title a {
-    color: $color-1;
+    color: $color-1 !important;
+    &:hover {
+    	text-decoration: none !important;
+    }
 }
 
 // hide site desc for now
