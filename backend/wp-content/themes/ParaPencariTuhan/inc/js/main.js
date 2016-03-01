@@ -8,7 +8,7 @@ $(document).ready(function () {
 
     $('.testimonial .item').slick({
     	arrows: false,
-    	swipe: true,
+    	swipe: false,
     	autoplay: true
     });
 	
