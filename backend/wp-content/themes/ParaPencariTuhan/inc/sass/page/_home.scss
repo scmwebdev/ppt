@@ -3,16 +3,19 @@
  * =============================== */
 
 .testimonial {
-    @include spacepad(1.5em);
     background-color: $color-1;
+    cursor: grab;
+    &:active {
+        cursor: grabbing;
+    }
     .item-list-desc {
+        @include spacepad(1.5em);
         text-align: center;
         color: #fff;
         font-style: italic;
         // remove margin bottom from p
         > p {
-			margin: 0;
+            margin: 0;
         }
-        
     }
 }

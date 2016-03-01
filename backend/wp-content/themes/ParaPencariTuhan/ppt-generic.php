@@ -14,19 +14,21 @@ get_header(); ?>
 		</div>
 		<div class="testimonial">
 			<div class="container">
-			<?php
-				$args = array (
-					'post_type' => 'post',
-				    'category_name' => 'testimonial',
-				    'posts_per_page' => 3
-				);
-				$the_query = new WP_Query($args); ?>
+				<div class="item">
+				<?php
+					$args = array (
+						'post_type' => 'post',
+					    'category_name' => 'testimonial',
+					    'posts_per_page' => 3
+					);
+					$the_query = new WP_Query($args); ?>
 
-				<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-					  <?php get_template_part( 'template-parts/partial', 'testimonial' ); ?>
-					<?php endwhile; ?>
-					<?php wp_reset_query(); ?>
+					<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+						  <?php get_template_part( 'template-parts/partial', 'testimonial' ); ?>
+						<?php endwhile; ?>
+						<?php wp_reset_query(); ?>
 				<?php endif; ?>
+				</div>
 			</div>
 		</div>
 	</main><!-- .site-main -->

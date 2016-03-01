@@ -54,3 +54,8 @@ body {
 .site-description {
     display: none;
 }
+
+// remove margin bottom from slick container carousel
+.slick-slider {
+	margin-bottom: 0;
+}

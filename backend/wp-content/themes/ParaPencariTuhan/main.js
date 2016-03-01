@@ -28,5 +28,11 @@ $(document).ready(function () {
 	setInterval(function () {
         siteTitle.removeClass('bounceInLeft');
     },2000);
+
+    $('.testimonial .item').slick({
+    	arrows: false,
+    	swipe: true,
+    	autoplay: true
+    });
 	
 });
