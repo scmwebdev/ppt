@@ -20,11 +20,11 @@ gulp.task('browserSync', function() {
     var files = [
         './style.css',
         './*.php',
-        './inc/template-parts/*.php'
+        './template-parts/*.php'
     ];
 
     browserSync.init(files, {
-        proxy: "localhost/ppt/",
+        proxy: "http://localhost/ppt/",
         notify: 'false'
     });
 });

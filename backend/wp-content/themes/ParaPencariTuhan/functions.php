@@ -139,6 +139,7 @@ add_image_size( 'square_md', 350, 350, true );
 add_image_size( 'mainBanner_lg', 1920, 600, true);
 add_image_size( 'mainBanner_md', 992, 400, true);
 add_image_size( 'mainBanner_xs', 600, 600, true);
+add_image_size( 'video_thumb', 400, 200, hard);
 
 function responsiveBanner() {
   if ( wp_is_mobile() ) {
