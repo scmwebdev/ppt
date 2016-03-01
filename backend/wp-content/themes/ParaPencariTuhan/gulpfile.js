@@ -7,6 +7,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var concat = require('gulp-concat');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
+var stripCssComments = require('gulp-strip-css-comments');
 
 /* path to custom theme */
 var path = 'backend/wp-content/themes/ParaPencariTuhan';
@@ -29,14 +30,11 @@ gulp.task('browserSync', function() {
 });
 
 gulp.task('sass', function() {
-    return gulp.src([
-            './inc/sass/main.scss',
-            './node_modules/bootstrap-sass/assets/stylesheets/bootstrap.scss',
-            './node_modules/slick-carousel/slick/slick.scss'
-        ])
+        gulp.src('./inc/sass/main.scss')
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'compressed' }))
+        // .pipe(sass())
         .pipe(rename({basename: 'style'}))
         .pipe(autoprefixer())
         .pipe(sourcemaps.write())

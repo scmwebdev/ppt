@@ -6,6 +6,12 @@ Version: 1.0.1455950509
 Updated: 2016-02-20 06:41:49
 */
 
+/* import bootstrap */
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap.scss';
+
+/* import slick carousel */
+@import '../../node_modules/slick-carousel/slick/slick.scss';
+
 /* import the variables */
 @import 'variables';
 
