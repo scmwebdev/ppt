@@ -29,7 +29,10 @@ gulp.task('browserSync', function() {
 });
 
 gulp.task('sass', function() {
-    return gulp.src('inc/sass/main.scss')
+    return gulp.src([
+            './inc/sass/main.scss',
+            './node_modules/bootstrap-sass/assets/stylesheets/bootstrap.scss'
+        ])
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'compressed' }))
@@ -42,7 +45,7 @@ gulp.task('sass', function() {
 
 gulp.task('js', function() {
     return gulp.src([
-            './inc/js/jquery.js',
+            './node_modules/jquery/dist/jquery.min.js',
             './inc/js/slick.js',
             './inc/js/main.js',
         ])
