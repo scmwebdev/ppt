@@ -7,3 +7,7 @@ src/
 
 # npm files
 node_modules/
+
+# ignore sublime files
+*.sublime-project
+*.sublime-workspace
