@@ -1,0 +1,18 @@
+/* ===============================
+ * Home Style
+ * =============================== */
+
+.testimonial {
+    @include spacepad(1.5em);
+    background-color: $color-1;
+    .item-list-desc {
+        text-align: center;
+        color: #fff;
+        font-style: italic;
+        // remove margin bottom from p
+        > p {
+			margin: 0;
+        }
+        
+    }
+}

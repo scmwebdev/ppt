@@ -18,7 +18,7 @@ get_header(); ?>
 				$args = array (
 					'post_type' => 'post',
 				    'category_name' => 'testimonial',
-				    'posts_per_page' => 1
+				    'posts_per_page' => 3
 				);
 				$the_query = new WP_Query($args); ?>
 
