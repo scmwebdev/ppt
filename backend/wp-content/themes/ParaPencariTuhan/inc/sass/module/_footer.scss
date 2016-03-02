@@ -1,0 +1,10 @@
+/* =========================
+ * Footer Style 
+ * ========================= */
+
+ .site-footer {
+ 	background: $color-1;
+ 	@extend .__spacepad;
+ 	color: #fff;
+ 	min-height: 200px;
+ }

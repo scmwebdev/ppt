@@ -1,0 +1,30 @@
+/* ===============================
+ * Video Single Post Style
+ * =============================== */
+
+.video-template {
+    .item-list {
+        &-video {
+            background: #000;
+            color: #fff;
+        }
+        &-name {
+            // set the styling for the title
+            h2 {
+                text-transform: capitalize;
+            }
+        }
+        // set the styling for the embedded video
+        iframe.vidio-embed {
+            max-height: 600px;
+            @extend .__spacepad;
+
+            @media (max-width: 767px) and (orientation: portrait){
+            	height: 250px;
+            }
+            @media (max-width: 767px) and (orientation: landscape){
+            	height: 400px;
+            }
+        }
+    }
+}

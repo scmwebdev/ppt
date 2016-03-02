@@ -34,7 +34,6 @@ gulp.task('sass', function() {
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'compressed' }))
-        // .pipe(sass())
         .pipe(rename({basename: 'style'}))
         .pipe(autoprefixer())
         .pipe(sourcemaps.write())

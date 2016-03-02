@@ -148,4 +148,26 @@ function responsiveBanner() {
     echo the_post_thumbnail('mainBanner_lg', array('class' => 'img-responsive __fullwidth'));
   }
 }
+
+/* ==================================================================
+ * Custom Post Type
+ * ================================================================== */
+
+// add_action('init', 'product_register');
+ 
+// function product_register() {
+//     $args = array(
+//         'label' => __('Video'),
+//         'singular_label' => __('Video'),
+//         'public' => true,
+//         'show_ui' => true,
+//         'capability_type' => 'post',
+//         'hierarchical' => false,
+//         'rewrite' => true,
+//         'supports' => array('title', 'editor', 'thumbnail')
+//     );
+ 
+//     register_post_type( 'product' , $args );
+// }
+
 ?>
