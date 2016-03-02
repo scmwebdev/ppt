@@ -10,6 +10,12 @@ body {
     font-size: 12pt;
 }
 
+// remove some extra space on the bottom
+body:after {
+    content: '';
+    display: none !important;
+}
+
 // prevent border to add width
 *,
 *:before,
