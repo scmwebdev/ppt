@@ -53,6 +53,11 @@ get_header(); ?>
 					<?php endif; ?>
 					<?php wp_reset_postdata(); ?>
 					</div>
+					<div class="more __right">
+						<a href="<?php echo site_url().'/video' ?>">
+							<button type="button" class="btn btn-ppt">More</button>
+						</a>
+					</div>
 				</div>
 				<?php if (is_front_page()) { ?>
 					<aside class="col-xs-12 col-sm-3">
