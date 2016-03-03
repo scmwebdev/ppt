@@ -16,9 +16,13 @@
 			<div class="footer-content">
 				<div>Copyright © Miss Celebrity 2014. All rights reserved.</div>
 				<div>Para Pencari Tuhan is a program owned by SCTV</div>
-				<div class="social-icon">
-					<div><i class="fa fa-facebook">&nbsp;</i></div>
-					<div><i class="fa fa-twitter">&nbsp;</i></div>
+				<div class="social-icon-list __spacepad __spacemar clearfix">
+					<div class="custom-container">
+						<div class="social-icon">
+							<a target="_blank" href="https://twitter.com/SCTV_"><i class="fa fa-twitter">&nbsp;</i></a></div>
+						<div class="social-icon">
+							<a target="_blank" href="https://www.facebook.com/Surya.Citra.TV/"><i class="fa fa-facebook">&nbsp;</i></a></div>
+					</div>
 				</div>
 			</div>
 			</div><!-- .site-info -->

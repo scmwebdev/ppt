@@ -61,3 +61,8 @@ ul.__nodot li {
 .__disabled {
 	pointer-events: none;
 }
+.custom-container {
+	max-width: 768px;
+	width: 100%;
+	@extend .container;
+}

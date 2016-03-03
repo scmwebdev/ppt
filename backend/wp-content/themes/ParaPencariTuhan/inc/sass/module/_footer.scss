@@ -10,12 +10,65 @@
         width: 100%;
         color: #fff;
         display: block;
-        text-align: center;
-        .fa {
-            background: $color-2;
-            padding: 10px 12px 10px 15px;
-            line-height: inherit;
-            border-radius: 50%;
+        text-align: left;
+        @include breakpoint('sm') {
+            text-align: center;
+        }
+        @include breakpoint('xs') {
+            font-size: 80%;
+        }
+        .social-icon-list {
+            .social-icon {
+                &:first-child {
+                    @extend .__left;
+                    @include breakpoint('sm') {
+                        text-align: right;
+                        @extend .col-sm-6;
+                    }
+                }
+                &:nth-child(2) {
+                    @extend .__left;
+                    @include breakpoint('sm') {
+                        text-align: left;
+                        @extend .col-sm-6;
+                    }
+                }
+                .fa {
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 42px;
+                    text-align: center;
+                    color: #FFF;
+                    color: rgba(255, 255, 255, 0.8);
+                    -webkit-transition: all 0.3s ease-in-out;
+                    transition: all 0.3s;
+                    &.fa-facebook {
+                        background-color: $color-2;
+                    }
+                    &.fa-twitter {
+                        background-color: #95ccee;
+                    }
+                    &:before {
+                        padding-left: .3em;
+                    }
+                    &:hover,
+                    &:active {
+                        -webkit-transform: scale(1.1);
+                        -moz-transform: scale(1.1);
+                        -ms-transform: scale(1.1);
+                        -o-transform: scale(1.1);
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+    // change the spacing on mobile for custom-container class
+    .custom-container {
+        @include breakpoint('xs') {
+            margin: 0;
+            padding: 0;
         }
     }
 }
