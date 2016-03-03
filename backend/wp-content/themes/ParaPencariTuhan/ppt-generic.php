@@ -35,7 +35,7 @@ get_header(); ?>
 		</div>
 		<div class="main-content">
 			<div class="container">
-				<div class="col-xs-12 col-sm-9">
+				<div class="col-xs-12 <?php isItHome('col-sm-9', 'col-xs-12') ?>">
 					<h3>Video</h3>
 					<div class="item row">
 			 		<?php
@@ -54,9 +54,13 @@ get_header(); ?>
 					<?php wp_reset_postdata(); ?>
 					</div>
 				</div>
-				<div class="side-content col-xs-12 col-sm-3">
-					<h3>Banner</h3>
-				</div>
+				<?php if (is_front_page()) { ?>
+					<aside class="col-xs-12 col-sm-3">
+						<?php get_template_part('template-parts/partial', 'side-content') ?>
+					</aside>
+				<?php } ?>
+				
+
 			</div>
 		</div>
 

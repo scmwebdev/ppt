@@ -61,6 +61,9 @@ ul.__nodot li {
 .__disabled {
 	pointer-events: none;
 }
+._visHidden {
+	visibility: hidden;
+}
 .custom-container {
 	max-width: 768px;
 	width: 100%;

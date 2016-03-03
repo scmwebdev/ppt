@@ -1,0 +1,10 @@
+/* =========================
+ * Banner Ads
+ * ========================= */
+
+ .banner_ads {
+ 	img {
+ 		@extend .img-responsive;
+ 		@extend .__fullwidth;
+ 	}
+ }
