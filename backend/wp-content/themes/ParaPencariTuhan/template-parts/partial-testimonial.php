@@ -1,3 +1,17 @@
-<div class="item-list">
-	<div class="item-list-desc"><?php the_content(); ?></div>
-</div>
+<?php
+	$args = array (
+		'post_type' => 'post',
+	    'cat' => 3,
+	    'posts_per_page' => 3,
+	    'orderby' => 'ASC'
+	);
+	$the_query = new WP_Query($args); ?>
+
+	<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+		  <div class="item-list">
+			<div class="item-list-desc"><?php the_content(); ?></div>
+		</div>
+		<?php endwhile; ?>
+		
+<?php endif; ?>
+<?php wp_reset_postdata(); ?>

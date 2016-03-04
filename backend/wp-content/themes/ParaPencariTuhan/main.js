@@ -35,4 +35,7 @@ $(document).ready(function () {
     	autoplay: true
     });
 	
+    $('.ads-mobile').slick({
+        autoplay: true
+    })
 });

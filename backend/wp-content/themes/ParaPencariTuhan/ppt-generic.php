@@ -15,48 +15,24 @@ get_header(); ?>
 		<div class="testimonial">
 			<div class="container">
 				<div class="item">
-				<?php
-					$args = array (
-						'post_type' => 'post',
-					    'cat' => 3,
-					    'posts_per_page' => 3,
-					    'orderby' => 'ASC'
-					);
-					$the_query = new WP_Query($args); ?>
-
-					<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-						  <?php get_template_part( 'template-parts/partial', 'testimonial' ); ?>
-						<?php endwhile; ?>
-						
-				<?php endif; ?>
-				<?php wp_reset_postdata(); ?>
+					<?php get_template_part( 'template-parts/partial', 'testimonial' ); ?>
 				</div>
 			</div>
 		</div>
 		<div class="main-content">
 			<div class="container">
 				<div class="col-xs-12 <?php isItHome('col-sm-9', 'col-xs-12') ?>">
-					<h3>Video</h3>
-					<div class="item row">
-			 		<?php
-						$args = array (
-							'post_type' => 'post',
-						    'cat' => 6,
-						    'posts_per_page' => 2
-						);
-						$the_query = new WP_Query($args); ?>
-
-						<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-							  <?php get_template_part( 'template-parts/partial', 'video' ); ?>
-							<?php endwhile;?>
-							
-					<?php endif; ?>
-					<?php wp_reset_postdata(); ?>
+					<div class="video">
+						<h2 class="_parent title _visHidden">Video</h2>
+						<div class="item row">
+							<?php get_template_part( 'template-parts/partial', 'video' ); ?>
+						</div>
 					</div>
-					<div class="more __right">
-						<a href="<?php echo site_url().'/video' ?>">
-							<button type="button" class="btn btn-ppt">More</button>
-						</a>
+					<div class="artikel">
+						<h2 class="_parent title _visHidden">Artikel</h2>
+						<div class="item row">
+							<?php get_template_part( 'template-parts/partial', 'artikel' ); ?>
+						</div>
 					</div>
 				</div>
 				<?php if (is_front_page()) { ?>
@@ -64,11 +40,13 @@ get_header(); ?>
 						<?php get_template_part('template-parts/partial', 'side-content') ?>
 					</aside>
 				<?php } ?>
-				
-
 			</div>
 		</div>
-
+		<div class="ads">
+			<div class="container">
+				<?php get_template_part('template-parts/content', 'banner-ads') ?>
+			</div>
+		</div>
 	</main><!-- .site-main -->
 </div><!-- .content-area -->
 <?php get_footer(); ?>

@@ -1,0 +1,15 @@
+/* =========================
+ * Typography 
+ * ========================= */
+
+.title {
+    font-weight: 700 !important;
+}
+
+._grandparent.title {
+    @extend .h1;
+}
+
+._parent.title {
+    @extend .h2;
+}
