@@ -4,7 +4,7 @@
 			$post_id = 92;
 			$query = get_post($post_id); 
 		?>
-		<?php echo get_the_post_thumbnail( $query->ID, 'bannerads_long' ); ?>
+		<?php echo get_the_post_thumbnail( $query->ID, 'bannerads_square_big' ); ?>
 	</div>
 	<div class="banner_ads bottom __right">
 		<?php
