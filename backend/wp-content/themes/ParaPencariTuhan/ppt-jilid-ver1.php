@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: ppt-generic
+ * Template Name: ppt-jilid
  *
  * @package ParaPencariTuhan
  */

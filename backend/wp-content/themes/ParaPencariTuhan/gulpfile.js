@@ -48,8 +48,7 @@ gulp.task('js', function() {
             './inc/js/main.js'
         ])
         .pipe(concat('main.js'))
-        .pipe(gulp.dest('./'))
-        .pipe(reload({ stream: true }));
+        .pipe(gulp.dest('./')) .pipe(reload({ stream: true }));
 });
 
 
