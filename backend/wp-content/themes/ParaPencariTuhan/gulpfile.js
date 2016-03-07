@@ -24,7 +24,7 @@ gulp.task('browserSync', function() {
     ];
 
     browserSync.init(files, {
-        proxy: "http://localhost/ppt/",
+        proxy: "http://localhost:8888/ppt/",
         notify: 'false'
     });
 });

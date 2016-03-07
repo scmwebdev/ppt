@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: ppt-generic
+ * Template Name: ppt-frontpage
  *
  * @package ParaPencariTuhan
  */
@@ -29,7 +29,7 @@ get_header(); ?>
 						</div>
 					</div>
 					<div class="artikel">
-						<h2 class="_parent title _visHidden">Artikel</h2>
+						<h2 class="_parent title _visHidden">artikel</h2>
 						<div class="item row">
 							<?php get_template_part( 'template-parts/partial', 'artikel' ); ?>
 						</div>
