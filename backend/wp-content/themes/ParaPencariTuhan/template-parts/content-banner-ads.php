@@ -26,7 +26,7 @@
 
 		<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 			  <div class="item-list">
-				<div class="item-list-desc"><?php the_post_thumbnail('bannerads_square', array('class' => 'img-responsive __fullwidth')); ?></div>
+				<div class="item-list-desc"><?php the_post_thumbnail(array('class' => 'center-block')); ?></div>
 			</div>
 			<?php endwhile; ?>
 			

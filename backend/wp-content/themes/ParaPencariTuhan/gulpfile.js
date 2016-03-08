@@ -53,7 +53,7 @@ gulp.task('js', function() {
 
 
 gulp.task('default', ['sass', 'js', 'browserSync'], function() {
-    gulp.watch('./inc/sass/**/*.scss', ['sass']);
-    gulp.watch('./inc/sass/*.scss', ['sass']);
-    gulp.watch('./inc/js/*.js', ['js']);
+    gulp.watch('**/*.scss', {'cwd': './inc/sass/'}, ['sass']);
+    gulp.watch('*.scss', {'cwd': './inc/sass/'}, ['sass']);
+    gulp.watch('*.js', {'cwd': './inc/js/'}, ['js']);
 });

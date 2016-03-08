@@ -12,15 +12,11 @@ get_header(); ?>
 		<div class="mainbanner">
 			<?php responsiveBanner(); ?>	
 		</div>
-		<div class="main-content">
+		<!-- <div class="main-content">
 			<div class="container">
-				<div class="jilid">
-					<div class="item row">
-						<?php get_template_part('template-parts/content', 'jilid') ?>
-					</div>
-				</div>
+				<?php get_template_part('template-parts/content', 'jilid') ?>
 			</div>
-		</div>
+		</div> -->
 		<div class="ads">
 			<div class="container">
 				<?php get_template_part('template-parts/content', 'banner-ads') ?>

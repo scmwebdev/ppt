@@ -64,4 +64,20 @@ body:after {
 // remove margin bottom from slick container carousel
 .slick-slider {
 	margin-bottom: 0;
+    overflow: hidden; //remove extra space on mobile on the whole page
+}
+
+/* ==============================
+ * Overwrite Vidio embed code
+ * ============================== */
+
+iframe.vidio-embed {
+    margin-bottom : 0;
+    height: 320px; //default height
+    @include breakpoint('sm') {
+        height: 200px; //tablet and small pc
+    }
+    @include breakpoint('md') {
+        height: 300px; //small pc and above
+    }
 }

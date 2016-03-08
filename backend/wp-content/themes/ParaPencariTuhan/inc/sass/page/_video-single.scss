@@ -16,7 +16,7 @@
         }
         // set the styling for the embedded video
         iframe.vidio-embed {
-            max-height: 600px;
+            height: 600px;
             @extend .__spacepad;
 
             @media (max-width: 767px) and (orientation: portrait){
