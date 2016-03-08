@@ -27,6 +27,10 @@
 	padding-right: 0;
 	padding-left: 0;
 }
+.__nospacepad {
+	padding-top: 0;
+	padding-bottom: 0;
+}
 
 .__nopaddingleft {
 	padding-left: 0;
@@ -36,6 +40,19 @@
 	padding-right: 0;
 }
 
+.__nomargin{
+	margin: 0;
+}
+.__nomarginleft {
+	margin-left: 0;
+}
+.__nomarginright {
+	margin-right: 0;
+}
+.__nospacemar {
+	margin-top: 0;
+	margin-bottom: 0;
+}
 .__bold {
 	font-weight: 700 !important;
 }
