@@ -21,10 +21,29 @@ get_header(); ?>
 					);
 					$pages = get_pages($args);
 					foreach ( $pages as $page ) {
-						$title = $page->post_title;
-						echo $title;
-					}
-				 ?>
+						$title = apply_filters('the_content', $page->post_title); 
+						$content = apply_filters('the_content', $page->post_content);
+						$pageId = apply_filters('get_the_ID', $page->ID);
+				?>
+				<div class="jilid-segment clearfix __spacepad">
+					<?php  if ( has_post_thumbnail() ) { ?>
+						<div class="jilid-segment-img col-sm-4">
+							<?php the_post_thumbnail('video_thumb', array('class' => 'img-responsive')); ?>
+						</div>
+					<?php } ?>
+					<div class="jilid-segment-title col-sm-8">
+						<h2 class="__nomargin"><?php echo $title; ?></h2>
+					</div>
+					<div class="jilid-segment-desc col-sm-8 __spacepad">
+						<?php echo $content; ?>
+					</div>
+					<div class="jilid-segment-btn __right">
+						<a href="<?php echo get_page_link($pageId); ?>">
+							<button type="button" class="btn btn-ppt">More</button>
+						</a>
+					</div>
+				</div>
+				<?php } ?>
 			</div>
 		</div>
 		<div class="ads">
