@@ -21,8 +21,8 @@ get_header(); ?>
 					);
 					$pages = get_pages($args);
 					foreach ( $pages as $page ) {
-						$title = apply_filters('the_content', $page->post_title); 
-						$content = apply_filters('the_content', $page->post_content);
+						$title = apply_filters('get_the_title', $page->post_title); 
+						$content = apply_filters('get_the_content', $page->post_content);
 						$pageId = apply_filters('get_the_ID', $page->ID);
 				?>
 				<div class="jilid-segment clearfix __spacepad">
@@ -39,7 +39,7 @@ get_header(); ?>
 					</div>
 					<div class="jilid-segment-btn __right">
 						<a href="<?php echo get_page_link($pageId); ?>">
-							<button type="button" class="btn btn-ppt">More</button>
+							<button type="button" class="btn btn-ppt">Go to <?php echo $title; ?></button>
 						</a>
 					</div>
 				</div>
