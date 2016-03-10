@@ -1,6 +1,6 @@
-<div class="jilid" id="jilid-1">
-	<h2 class="title">Jilid 1</h2>
-	<div class="item row __spacepad">
+<div class="jilid" id="<?php the_title(); ?>">
+	<h2 class="title"><?php the_title(); ?> Video List</h2>
+	<div class="item row __spacepad slickSlider">
 		<?php
 			$cat = get_field('category'); 
 			$args = array (

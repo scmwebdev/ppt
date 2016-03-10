@@ -64,7 +64,52 @@ body:after {
 // remove margin bottom from slick container carousel
 .slick-slider {
 	margin-bottom: 0;
-    overflow: hidden; //remove extra space on mobile on the whole page
+    // overflow: hidden; remove extra space on mobile on the whole page
+}
+
+/* ==============================
+ * Slick Slider Overwrites
+ * ============================== */
+
+/* 
+* make the arrow sits on top of the content and not on side
+* this fixes the extra width on the sides for the whole page
+*/
+
+.slick-prev,
+.slick-next {
+    z-index: 2;
+    // padding: 75px;
+
+    // hide the arrows on the slider on small screen
+    @media (max-width: 768px) {
+        display: none !important;
+    }
+}
+
+/* change the arrow to fontawesome */
+.slick-next {
+    // right: 0;
+    &:before {
+        // font-family: 'Glyphicons Halflings';
+        // content: '\e080';
+        font: normal normal normal 14px/1 FontAwesome;
+        content: "\f138";
+        color: #000;
+        font-size: 30px;
+    }
+}
+
+.slick-prev {
+    // left: 0;
+    &:before {
+        // font-family: 'Glyphicons Halflings';
+        // content: '\e079';
+        font: normal normal normal 14px/1 FontAwesome;
+        content: "\f137";
+        color: #000;
+        font-size: 30px;
+    }
 }
 
 /* ==============================
