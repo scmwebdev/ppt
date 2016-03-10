@@ -1,0 +1,12 @@
+/* ===================================
+ * This is a module for custom slick slider 
+ * =================================== */
+
+.slickSlider {
+    .item {
+        &-list {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}
