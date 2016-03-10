@@ -15,8 +15,7 @@ $(document).ready(function() {
     $('.ads-mobile').slick({
         autoplay: true
     })
-    $('.jilid .item').slick({
-        dots: true,
+    $('.slickSlider.item').slick({
         slidesToShow: 2,
         // variableWidth: true,
         draggable: true,
@@ -25,8 +24,6 @@ $(document).ready(function() {
                 settings: {
                     slidesToShow: 6,
                     slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
                 }
             }, {
                 breakpoint: 600,
