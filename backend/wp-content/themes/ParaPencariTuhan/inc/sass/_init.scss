@@ -73,11 +73,11 @@ body:after {
 
 iframe.vidio-embed {
     margin-bottom : 0;
-    height: 320px; //default height
+    height: 200px; //default height
     @include breakpoint('sm') {
         height: 200px; //tablet and small pc
     }
     @include breakpoint('md') {
-        height: 300px; //small pc and above
+        height: 200px; //small pc and above
     }
 }
