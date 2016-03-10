@@ -12,11 +12,11 @@ $the_query = new WP_Query($args); ?>
 	
 		<div class="item-list-name __spacepad"><?php the_title(); ?></div>
 		<div class="item-list-desc"><?php the_excerpt(); ?></div>
-	<div class="more __right">
-		<a href="<?php the_permalink(); ?>">
-			<button type="button" class="btn btn-ppt">More</button>
-		</a>
-	</div>
+		<div class="more __right">
+			<a href="<?php the_permalink(); ?>">
+				<button type="button" class="btn btn-ppt">More</button>
+			</a>
+		</div>
 </div>
 
 <?php endwhile; ?>

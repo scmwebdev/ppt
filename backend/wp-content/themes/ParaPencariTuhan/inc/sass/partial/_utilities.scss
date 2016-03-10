@@ -1,6 +1,6 @@
 /* =================
- * Utility Classes
- * ================= */
+* Utility Classes
+* ================= */
 
 .__fullwidth {
     width: 100%;
@@ -13,77 +13,91 @@
     background-color: #f4f4f4;
     border-top: 1px solid #dededb;
 }
+
 .__spacemar {
-	margin-top: 15px;
-	margin-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .__spacepad {
-	padding-top: 15px;
-	padding-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .__nopadding {
-	padding-right: 0;
-	padding-left: 0;
+    padding-right: 0;
+    padding-left: 0;
 }
+
 .__nospacepad {
-	padding-top: 0;
-	padding-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .__nopaddingleft {
-	padding-left: 0;
+    padding-left: 0;
 }
 
 .__nopaddingright {
-	padding-right: 0;
+    padding-right: 0;
 }
-.__nospacemar{
-	margin-top:0;
-.__nomargin{
-	margin: 0;
-}
-.__nomarginleft {
-	margin-left: 0;
-}
-.__nomarginright {
-	margin-right: 0;
-}
+
 .__nospacemar {
-	margin-top: 0;
-	margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
+
+.__nomargin {
+    margin: 0;
+}
+
+.__nomarginleft {
+    margin-left: 0;
+}
+
+.__nomarginright {
+    margin-right: 0;
+}
+
+.__nospacemar {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .__bold {
-	font-weight: 700 !important;
+    font-weight: 700 !important;
 }
 
 .__right {
-	float: right;
+    float: right;
 }
 
 .__left {
-	float: left;
+    float: left;
 }
+
 ul.__nodot li {
-	list-style-type: none !important;
+    list-style-type: none !important;
 }
 
 .active {
-	display: block;
+    display: block;
 }
+
 .not-active {
-	display: none;
+    display: none;
 }
 
 .__disabled {
-	pointer-events: none;
+    pointer-events: none;
 }
+
 ._visHidden {
-	visibility: hidden;
+    visibility: hidden;
 }
+
 .custom-container {
-	max-width: 768px;
-	width: 100%;
-	@extend .container;
+    max-width: 768px;
+    width: 100%;
+    @extend .container;
 }

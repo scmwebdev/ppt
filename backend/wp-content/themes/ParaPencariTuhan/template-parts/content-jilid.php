@@ -1,55 +1,60 @@
 <div class="jilid" id="jilid-1">
 	<h2 class="title">Jilid 1</h2>
 	<div class="item row __spacepad">
-<?php
-	$args = array (
-		'post_type' => 'post',
-	    'category__and' => '9, 6'
-	);
+		<?php
+			$args = array (
+				'post_type' => 'post',
+			    'category__and' => '9, 6',
+			    'posts_per_page' => 4
+			);
 
-	$the_query = new WP_Query($args); ?>
+			$the_query = new WP_Query($args); ?>
 
-	<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-	<?php $videoUrl = get_field('video-url'); ?>
-	<?php $jilid = get_field('jilid'); ?>
-		<div class="item-list">
-			<a href="<?php the_permalink(); ?>">
-			<div class="item-list-content __spacepad"><?php the_post_thumbnail('video_thumb', array('class' => 'img-responsive __fullwidth')); ?></div>
-			<div class="item-list-name __nospacemar"><h4 class><?php the_title(); ?></h4></div>
-			</a>
-		</div>
-	<?php endwhile; ?>
-
-<?php endif; ?>
-<?php wp_reset_query(); ?>
+			<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+			<?php $videoUrl = get_field('video-url'); ?>
+			<?php $jilid = get_field('jilid'); ?>
+				<div class="item-list">
+					<a href="<?php the_permalink(); ?>">
+					<div class="item-list-content __spacepad"><?php the_post_thumbnail('video_thumb', array('class' => 'img-responsive __fullwidth')); ?></div>
+					<div class="item-list-name __nospacemar"><h4 class><?php the_title(); ?></h4></div>
+					</a>
+				</div>
+			<?php endwhile; ?>
+		<?php endif; ?>
+		<?php wp_reset_query(); ?>
+	</div>
+	<div class="more text-right">
+		<a href="<?php the_permalink(); ?>">
+			<button type="button" class="btn btn-ppt">More</button>
+		</a>
 	</div>
 </div>
-<hr />
+<hr class="block" />
 <div class="jilid" id="jilid-2">
 	<h2 class="title">Jilid 2</h2>
 	<div class="item row __spacepad">
-<?php
-	$args = array (
-		'post_type' => 'post',
-	    'category__and' => '10, 6',
-	    'posts_per_page' => 4
-	);
+		<?php
+			$args = array (
+				'post_type' => 'post',
+			    'category__and' => '10, 6',
+			    'posts_per_page' => 4
+			);
 
-	$the_query = new WP_Query($args); ?>
+			$the_query = new WP_Query($args); ?>
 
-	<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-	<?php $videoUrl = get_field('video-url'); ?>
-	<?php $jilid = get_field('jilid'); ?>
-		<div class="item-list">
-			<a href="<?php the_permalink(); ?>">
-			<div class="item-list-content __spacepad"><?php the_post_thumbnail('video_thumb', array('class' => 'img-responsive __fullwidth')); ?></div>
-			<div class="item-list-name __nospacemar"><h4 class><?php the_title(); ?></h4></div>
-			</a>
-		</div>
-	<?php endwhile; ?>
+			<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+			<?php $videoUrl = get_field('video-url'); ?>
+			<?php $jilid = get_field('jilid'); ?>
+				<div class="item-list">
+					<a href="<?php the_permalink(); ?>">
+					<div class="item-list-content __spacepad"><?php the_post_thumbnail('video_thumb', array('class' => 'img-responsive __fullwidth')); ?></div>
+					<div class="item-list-name __nospacemar"><h4 class><?php the_title(); ?></h4></div>
+					</a>
+				</div>
+			<?php endwhile; ?>
 
-<?php endif; ?>
-<?php wp_reset_query(); ?>
+		<?php endif; ?>
+		<?php wp_reset_query(); ?>
 	</div>
 <hr />
 
