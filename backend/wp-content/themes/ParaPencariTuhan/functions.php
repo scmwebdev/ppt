@@ -38,7 +38,7 @@ if ( is_page() && $post->post_parent )
 	else
 	  $childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->ID . '&echo=0' );
 	if ( $childpages ) {
-	  $string = '<ul class="__nodot __nopaddingleft">' . $childpages . '</ul>';
+	  $string = '<ul class="__nodot __nopaddingleft __nomarginleft">' . $childpages . '</ul>';
 	}
 	return $string;
 }

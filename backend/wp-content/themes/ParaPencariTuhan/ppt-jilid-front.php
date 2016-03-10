@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: ppt-jilid
+ * Template Name: ppt-jilid-front
  *
  * @package ParaPencariTuhan
  */
@@ -14,7 +14,17 @@ get_header(); ?>
 		</div>
 		<div class="main-content">
 			<div class="container">
-				<?php get_template_part('template-parts/content', 'jilid') ?>
+				<h1>Jilid List</h1>
+				<?php 
+					$args = array (
+						'child_of' => 28
+					);
+					$pages = get_pages($args);
+					foreach ( $pages as $page ) {
+						$title = $page->post_title;
+						echo $title;
+					}
+				 ?>
 			</div>
 		</div>
 		<div class="ads">

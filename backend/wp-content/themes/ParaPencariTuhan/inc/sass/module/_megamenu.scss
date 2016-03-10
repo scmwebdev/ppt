@@ -5,6 +5,7 @@
 .main-navigation a {
     color: $color-1;
     border-bottom: 2px solid #fff; 
+    transition: 0.2s;
     &:hover {
         text-decoration: none;
         color: $color-2;
