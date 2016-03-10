@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: ppt-jilid-ver2
+ * Template Name: ppt-jilid-content
  *
  * @package ParaPencariTuhan
  */
@@ -14,12 +14,7 @@ get_header(); ?>
 		</div>
 		<div class="main-content">
 			<div class="container">
-			<div class="col-sm-4">
-				menu
-			</div>
-				<div class="col-sm-8">
-					<?php get_template_part('template-parts/content', 'jilid') ?>
-				</div>
+				<?php get_template_part('template-parts/content', 'jilid') ?>
 			</div>
 		</div>
 		<div class="ads">
