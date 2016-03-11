@@ -5,7 +5,7 @@ $(document).ready(function() {
     setInterval(function() {
         siteTitle.removeClass('bounceInLeft');
     }, 2000);
-
+    $('#Container').mixItUp();
     $('.testimonial .item').slick({
         arrows: false,
         swipe: false,

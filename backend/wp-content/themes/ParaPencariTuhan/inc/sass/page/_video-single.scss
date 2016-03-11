@@ -7,23 +7,23 @@
         &-video {
             background: #000;
             color: #fff;
+            // set the styling for the embedded video
+            iframe {
+                height: 600px;
+                width: 100%;
+                @extend .__spacepad;
+                @media (max-width: 767px) and (orientation: portrait) {
+                    height: 250px;
+                }
+                @media (max-width: 767px) and (orientation: landscape) {
+                    height: 400px;
+                }
+            }
         }
         &-name {
             // set the styling for the title
             h2 {
                 text-transform: capitalize;
-            }
-        }
-        // set the styling for the embedded video
-        iframe.vidio-embed {
-            height: 600px;
-            @extend .__spacepad;
-
-            @media (max-width: 767px) and (orientation: portrait){
-            	height: 250px;
-            }
-            @media (max-width: 767px) and (orientation: landscape){
-            	height: 400px;
             }
         }
     }

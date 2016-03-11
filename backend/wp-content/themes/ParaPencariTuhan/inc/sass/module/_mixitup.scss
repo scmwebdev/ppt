@@ -1,0 +1,12 @@
+.mix {
+	width: 100px;
+	height: 100px;
+	background-color: $color-1;
+	@extend .col-xs-12;
+	@extend .col-xs-4;
+	margin: 15px;
+}
+
+#Container .mix{
+	display: none;
+}
