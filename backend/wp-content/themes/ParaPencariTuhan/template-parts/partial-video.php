@@ -21,15 +21,4 @@ $the_query = new WP_Query($args); ?>
 <?php endif; ?>
 <?php wp_reset_postdata(); ?>
 
-<div class="col-xs-12">
-	<div class="filter" data-filter="all">Show All</div>
-	<div class="filter" data-filter=".category-1">Category 1</div>
-	<div class="filter" data-filter=".category-2">Category 2</div>
 
-<div id="Container">
-	<div class="mix category-1" data-myorder="2"></div>
-	<div class="mix category-2" data-myorder="4"></div>
-	<div class="mix category-1" data-myorder="1"></div>
-	<div class="mix category-2" data-myorder="8"></div>
-</div>
-</div>
