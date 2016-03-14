@@ -13,8 +13,14 @@
 		</div>
 		<div class="item-list-content">
 			<div class="container">
-				<h2>Sinopsis</h2>
-				<div class="__spacepad"><?php the_content(); ?></div>
+
+				<?php
+					$thecontent = get_the_content();
+					if(!empty($thecontent)) { ?>
+						<h2>Sinopsis</h2>
+				    	<?php the_content(); ?>
+
+				<?php } ?> 
 			</div>
 		</div>
 	</div>
