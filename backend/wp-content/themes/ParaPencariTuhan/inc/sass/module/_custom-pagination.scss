@@ -1,0 +1,36 @@
+/* ============================================================
+  CUSTOM PAGINATION
+============================================================ */
+.custom-pagination span,
+.custom-pagination a {
+  display: inline-block;
+  padding: 2px 10px;
+}
+.custom-pagination a {
+  background-color: #ebebeb;
+  // color: #ff3c50;
+  color: $color-2;
+}
+.custom-pagination a:hover {
+  // background-color: #ff3c50;
+  background-color: $color-2;
+  color: #fff;
+}
+.custom-pagination span.page-num {
+  margin-right: 10px;
+  padding: 0;
+}
+.custom-pagination span.dots {
+  padding: 0;
+  color: gainsboro;
+}
+.custom-pagination span.current {
+  // background-color: #ff3c50;
+  background-color: $color-2;
+  color: #fff;
+}
+.custom-pagination {
+  text-align: center;
+  @extend .col-xs-12;
+  @extend .__spacepad;
+}
