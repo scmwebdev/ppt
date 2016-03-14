@@ -4,6 +4,11 @@
  * ====================== */
 
  #video {
+ 	.item {
+ 		@include breakpoint('sm') {
+ 			@extend .row;
+ 		}
+ 	}
  	.item-list.mix {
  		float: left;
  		padding: 15px;
