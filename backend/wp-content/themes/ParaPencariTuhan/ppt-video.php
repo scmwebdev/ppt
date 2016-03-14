@@ -12,21 +12,14 @@ get_header(); ?>
 		<div class="mainbanner">
 			<?php responsiveBanner(); ?>	
 		</div>
-		<div class="main-content">
+		<div class="main-content" id="<?php echo strtolower(get_the_title()) ?>">
 			<div class="container">
-			<div class="col-xs-12">
-						<div class="filter" data-filter="all">Show All</div>
-						<div class="filter" data-filter=".category-1">Category 1</div>
-						<div class="filter" data-filter=".category-2">Category 2</div>
-
-						<div id="Container">
-							<div class="mix category-1" data-myorder="2"></div>
-							<div class="mix category-2" data-myorder="4"></div>
-							<div class="mix category-1" data-myorder="1"></div>
-							<div class="mix category-2" data-myorder="8"></div>
-						</div>
-					</div>
-				<div class="item row">
+				<div class="col-xs-12 __nopadding" id="the_filter">
+					<div class="filter col-xs-12 col-sm-4 __spacepad" data-filter="all">Show All</div>
+					<div class="filter col-xs-12 col-sm-4 __spacepad" data-filter=".vid_testimonial">Testimonial</div>
+					<div class="filter col-xs-12 col-sm-4 __spacepad" data-filter=".vid_regular">Lainnya</div>
+				</div>
+				<div class="item row __spacepad __spacemar col-xs-12">
 				<?php
 				
 					//example of args
@@ -40,12 +33,16 @@ get_header(); ?>
 				
 					//create the WP loop
 					if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post();
+
+					$filter = get_field('filter');
 				?>
 				
-				<div class="item-list">
+				<div class="item-list mix <?php echo $filter; ?>">
+					<a href="<?php the_permalink(); ?>">
 					<div class="item-list-pic">
 						<?php the_post_thumbnail('video_thumb', array('class' => 'img-responsive')); ?>
 					</div>
+					</a>
 				</div>
 					
 				

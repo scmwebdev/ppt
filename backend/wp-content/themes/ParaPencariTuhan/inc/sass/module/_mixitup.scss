@@ -1,12 +1,16 @@
-.mix {
-	width: 100px;
-	height: 100px;
-	background-color: $color-1;
-	@extend .col-xs-12;
-	@extend .col-xs-4;
-	margin: 15px;
+/* ======================
+ * MixItUp SCSS
+ * ====================== */
+
+#video .mix {
+	display: none;
 }
 
-#Container .mix{
-	display: none;
+#the_filter {
+	border-bottom: 2px solid $color-1;
+	.filter {
+		cursor: pointer;
+		text-align: center;
+		color: $color-1;
+	}
 }

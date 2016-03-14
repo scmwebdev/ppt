@@ -6,6 +6,11 @@ $(document).ready(function() {
         siteTitle.removeClass('bounceInLeft');
     }, 2000);
     $('#Container').mixItUp();
+    $('#video .item').mixItUp();
+    $('#the_filter .filter').click(function() {
+        $(this).removeClass('active');
+        $(this).addClass('active').siblings().removeClass('active');
+    });
     $('.testimonial .item').slick({
         arrows: false,
         swipe: false,
