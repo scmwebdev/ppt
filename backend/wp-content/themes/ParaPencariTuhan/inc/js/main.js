@@ -1,11 +1,13 @@
 $(document).ready(function() {
+
+    /********* DELETE THIS WHEN WE GO LIVE *********/
     console.log('start custom js');
+    /********* DELETE THIS WHEN WE GO LIVE *********/
     var siteTitle = $('.site-title');
     siteTitle.addClass('animated bounceInLeft');
     setInterval(function() {
         siteTitle.removeClass('bounceInLeft');
     }, 2000);
-    $('#Container').mixItUp();
     $('#video .item').mixItUp();
     $('#the_filter .filter').click(function() {
         $(this).removeClass('active');
@@ -14,7 +16,8 @@ $(document).ready(function() {
     $('.testimonial .item').slick({
         arrows: false,
         swipe: false,
-        autoplay: true
+        autoplay: true,
+        adaptiveHeight: true
     });
 
     $('.ads-mobile').slick({

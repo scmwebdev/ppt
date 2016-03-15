@@ -7,9 +7,15 @@
 	);
 	$the_query = new WP_Query($args); ?>
 
-	<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+	<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
+
+		$author = get_field('quote_author');
+	?>
 		  <div class="item-list">
-			<div class="item-list-desc"><?php the_content(); ?></div>
+			<div class="item-list-desc">
+				<?php echo get_the_content() . ' - '. $author; ?>
+			</div>
+			
 		</div>
 		<?php endwhile; ?>
 		
