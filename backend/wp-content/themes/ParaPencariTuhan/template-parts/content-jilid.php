@@ -6,7 +6,9 @@
 			$args = array (
 				'post_type' => 'post',
 			    'cat' => $cat,
-			    'posts_per_page' => 4
+			    'posts_per_page' => 15,
+			    'orderby' => 'title',
+			    'order' => 'ASC'
 			);
 
 			$the_query = new WP_Query($args); ?>

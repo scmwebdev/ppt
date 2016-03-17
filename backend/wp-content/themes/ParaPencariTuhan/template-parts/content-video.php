@@ -25,3 +25,4 @@
 		</div>
 	</div>
 </div>
+<script src="//cdn0-a.production.vidio.static6.com/assets/javascripts/vidio-embed.js"></script>
