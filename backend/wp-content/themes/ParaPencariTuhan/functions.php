@@ -136,7 +136,7 @@ add_image_size( 'site_logo_xs', 50, 50, true );
 add_image_size( 'site_logo_md', 150, 150, true );
 add_image_size( 'square_xs', 200, 200, true );
 add_image_size( 'square_md', 350, 350, true );
-add_image_size( 'mainBanner_lg', 1920, 600, hard);
+add_image_size( 'mainBanner_lg', 1920, 600, true);
 add_image_size( 'mainBanner_md', 992, 400, true);
 add_image_size( 'mainBanner_xs', 600, 600, true);
 add_image_size( 'video_thumb', 400, 200, hard);
@@ -147,9 +147,11 @@ function responsiveBanner() {
   global $post; 
   $post_id = $post->ID; 
   if (wp_is_mobile()) {
-    echo get_the_post_thumbnail($post_id, 'mainBanner_xs', array('class' => 'img-responsive __fullwidth'));
+    // echo get_the_post_thumbnail($post_id, 'mainBanner_xs', array('class' => 'img-responsive __fullwidth'));
+    the_post_thumbnail('mainBanner_xs', array('class' => 'img-responsive __fullwidth') );
   } else {
-    echo get_the_post_thumbnail($post_id, 'mainBanner_lg', array('class' => 'img-responsive __fullwidth'));
+    // echo get_the_post_thumbnail($post_id, 'mainBanner_lg', array('class' => 'img-responsive __fullwidth'));
+    the_post_thumbnail('mainBanner_lg', array('class' => 'img-responsive __fullwidth') );
   }
 }
 

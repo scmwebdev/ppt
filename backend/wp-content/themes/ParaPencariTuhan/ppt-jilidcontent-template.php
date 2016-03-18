@@ -11,8 +11,7 @@ get_header(); ?>
 	<main id="main" class="site-main" role="main">
 		<div class="mainbanner">
 			<?php 
-				//responsiveBanner(); 
-			  	the_post_thumbnail('mainBanner_lg', array('class' => 'img-responsive'));
+				responsiveBanner(); 
 			?>	
 		</div>
 		<div class="main-content clearfix">

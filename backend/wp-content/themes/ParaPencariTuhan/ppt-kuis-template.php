@@ -16,7 +16,7 @@ get_header(); ?>
 			<div class="container">
 
 				<?php get_template_part('template-parts/kuis', get_the_slug() )?>
-
+	
 			</div>
 		</div>
 		<!-- <div class="social-media __spacepad">

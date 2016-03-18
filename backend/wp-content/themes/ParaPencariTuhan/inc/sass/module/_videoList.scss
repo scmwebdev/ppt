@@ -1,3 +1,9 @@
 /* =========================
  * Styling For Video List
  * ========================= */
+
+.item-list {
+    @include breakpoint('xs') {
+        text-align: center;
+    }
+}
