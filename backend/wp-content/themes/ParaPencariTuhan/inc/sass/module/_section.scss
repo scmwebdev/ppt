@@ -1,0 +1,22 @@
+/* ==============================
+ * Section
+ * ============================== */
+
+.__section {
+    &-head {
+        background: $color-1;
+        color: #fff;
+        padding: 10px 15px;
+    }
+    &-content {
+        background: lighten($color-3, 5%);
+        padding: 15px;
+        // line-height: 1.8;
+        ul,
+        ol {
+            li {
+                margin: 10px 0;
+            }
+        }
+    }
+}

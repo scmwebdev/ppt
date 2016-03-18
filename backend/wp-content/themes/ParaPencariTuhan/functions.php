@@ -136,7 +136,7 @@ add_image_size( 'site_logo_xs', 50, 50, true );
 add_image_size( 'site_logo_md', 150, 150, true );
 add_image_size( 'square_xs', 200, 200, true );
 add_image_size( 'square_md', 350, 350, true );
-add_image_size( 'mainBanner_lg', 1920, 600, true);
+add_image_size( 'mainBanner_lg', 1920, 600, hard);
 add_image_size( 'mainBanner_md', 992, 400, true);
 add_image_size( 'mainBanner_xs', 600, 600, true);
 add_image_size( 'video_thumb', 400, 200, hard);
@@ -144,10 +144,12 @@ add_image_size( 'bannerads_square', 310, 273, true);
 add_image_size( 'bannerads_square_big', 755, 273, true);
 
 function responsiveBanner() {
-  if ( wp_is_mobile() ) {
-    echo the_post_thumbnail('mainBanner_xs', array('class' => 'img-responsive __fullwidth'));
+  global $post; 
+  $post_id = $post->ID; 
+  if (wp_is_mobile()) {
+    echo get_the_post_thumbnail($post_id, 'mainBanner_xs', array('class' => 'img-responsive __fullwidth'));
   } else {
-    echo the_post_thumbnail('mainBanner_lg', array('class' => 'img-responsive __fullwidth'));
+    echo get_the_post_thumbnail($post_id, 'mainBanner_lg', array('class' => 'img-responsive __fullwidth'));
   }
 }
 
@@ -162,5 +164,28 @@ function isItHome($args1, $args2) {
     echo $args2;
   }
 }
+
+
+function get_the_slug( $id=null ){
+  if( empty($id) ):
+    global $post;
+    if( empty($post) )
+      return ''; // No global $post var available.
+    $id = $post->ID;
+  endif;
+
+  $slug = basename( get_permalink($id) );
+  return $slug;
+}
+
+/**
+ * Display the page or post slug
+ *
+ * Uses get_the_slug() and applies 'the_slug' filter.
+ */
+function the_slug( $id=null ){
+  echo apply_filters( 'the_slug', get_the_slug($id) );
+}
+
 
 ?>
