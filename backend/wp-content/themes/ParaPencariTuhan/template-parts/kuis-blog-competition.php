@@ -3,9 +3,9 @@
 	<p class="lead">
 		Tulis review tayangan Para Pencari Tuhan versi kamu! Dan menangkan total hadiah Jutaan Rupiah!
 	</p>
-	<div class="__section">
-		<p class="lead __section-head __nomarginbottom __bold">Syarat dan ketentuan: </p>
-		<div class="__section-content">
+	<div class="__section-panel">
+		<p class="lead __section-panel-head __nomarginbottom __bold">Syarat dan ketentuan: </p>
+		<div class="__section-panel-content">
 			<ol class="nodots __nopaddingleft ">
 				<li>
 					Peserta harus memfollow akun twitter @SCTV_ dan me"like" Facebook Fan Page Surya.Citra.TV 
@@ -37,8 +37,5 @@
 				</li>
 			</ol>
 		</div>
-
 	</div>
-	
-
 </div>
