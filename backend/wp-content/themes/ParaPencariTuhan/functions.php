@@ -105,24 +105,6 @@ function custom_pagination($numpages = '', $pagerange = '', $paged='') {
 
 }
 
-/* ==================================================================
- * Retrieve current url
- * ================================================================== */
-
-function current_page_url() {
-  $pageURL = 'http';
-  if( isset($_SERVER["HTTPS"]) ) {
-    if ($_SERVER["HTTPS"] == "on") {$pageURL .= "s";}
-  }
-  $pageURL .= "://";
-  if ($_SERVER["SERVER_PORT"] != "80") {
-    $pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
-  } else {
-    $pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
-  }
-  return $pageURL;
-}
-
 
 /* ==================================================================
  * Enable Featured Image
@@ -187,6 +169,24 @@ function get_the_slug( $id=null ){
  */
 function the_slug( $id=null ){
   echo apply_filters( 'the_slug', get_the_slug($id) );
+}
+
+/* ==================================================================
+ * Retrieve current url
+ * ================================================================== */
+
+function current_page_url() {
+  $pageURL = 'http';
+  if( isset($_SERVER["HTTPS"]) ) {
+    if ($_SERVER["HTTPS"] == "on") {$pageURL .= "s";}
+  }
+  $pageURL .= "://";
+  if ($_SERVER["SERVER_PORT"] != "80") {
+    $pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
+  } else {
+    $pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+  }
+  return $pageURL;
 }
 
 

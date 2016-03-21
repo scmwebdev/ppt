@@ -28,12 +28,12 @@ get_header(); ?>
 							<?php get_template_part( 'template-parts/partial', 'video' ); ?>
 						</div>
 					</div>
-					<div class="artikel">
+					<!-- <div class="artikel">
 						<h2 class="_parent title _visHidden">artikel</h2>
 						<div class="item row">
 							<?php get_template_part( 'template-parts/partial', 'artikel' ); ?>
 						</div>
-					</div>
+					</div> -->
 				</div>
 				<?php if (is_front_page()) { ?>
 					<aside class="col-xs-12 col-sm-3">

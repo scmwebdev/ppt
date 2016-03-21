@@ -20,5 +20,11 @@ $the_query = new WP_Query($args); ?>
 
 <?php endif; ?>
 <?php wp_reset_postdata(); ?>
+<div class="ppt-btn col-xs-12 text-right __spacepad">
+	<a href="<?php echo current_page_url().'/jilid' ?>">
+		<button type="button" class="btn btn-ppt">Go to Jilid</button>
+	</a>
+</div>
+
 
 
