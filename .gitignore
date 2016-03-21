@@ -11,3 +11,6 @@ node_modules/
 # ignore sublime files
 *.sublime-project
 *.sublime-workspace
+
+# ignore .sql files
+*.sql
