@@ -14,7 +14,7 @@
 
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="footer-content">
-				<div>Copyright © Miss Celebrity 2014. All rights reserved.</div>
+				<div>Copyright © Miss Celebrity 2014. All rights reserved. test</div>
 				<div>Para Pencari Tuhan is a program owned by SCTV</div>
 				<div class="social-icon-list __spacepad __spacemar clearfix">
 					<div class="custom-container">
