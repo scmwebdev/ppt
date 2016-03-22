@@ -35,7 +35,7 @@ set :deploy_to, '/home/dodo/parapencarituhan'
 # set :keep_releases, 5
 
 set :keep_releases, 2
-set :linked_dirs, fetch(:linked_dirs, []).push('cms/wp-content/uploads')
+set :linked_dirs, fetch(:linked_dirs, []).push('backend/wp-content/uploads')
 
 namespace :deploy do
 
