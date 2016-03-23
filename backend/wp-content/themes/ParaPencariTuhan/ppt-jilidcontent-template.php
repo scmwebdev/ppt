@@ -21,7 +21,7 @@ get_header(); ?>
 		</div>
 		<div class="ads clearfix">
 			<div class="container">
-				<?php get_template_part('template-parts/content', 'banner-ads') ?>
+				<?php //get_template_part('template-parts/content', 'banner-ads') ?>
 			</div>
 		</div>
 	</main><!-- .site-main -->
