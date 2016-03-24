@@ -29,7 +29,9 @@ get_header(); ?>
 				<div class="jilid-segment clearfix __spacepad">
 					<?php  if ( has_post_thumbnail() ) { ?>
 						<div class="jilid-segment-img col-sm-4">
-							<?php the_post_thumbnail('video_thumb', array('class' => 'img-responsive')); ?>
+							<?php 
+								echo get_the_post_thumbnail($page->ID, 'video_thumb', array('class' => 'img-responsive'));
+							?>
 						</div>
 					<?php } ?>
 					<div class="jilid-segment-title col-sm-8">
