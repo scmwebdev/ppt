@@ -23,7 +23,7 @@ get_header(); ?>
 					foreach ( $pages as $page ) {
 						$title = apply_filters('get_the_title', $page->post_title); 
 						$content = apply_filters('get_the_content', $page->post_content);
-						$excerpt = apply_filters('get_the_excerpt', $page->post_content);
+						$excerpt = apply_filters('the_execerpt', $page->post_excerpt);
 						$pageId = apply_filters('get_the_ID', $page->ID);
 				?>
 				<div class="jilid-segment clearfix __spacepad">

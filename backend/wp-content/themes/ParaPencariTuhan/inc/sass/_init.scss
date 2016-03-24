@@ -10,6 +10,11 @@ body {
     font-size: 12pt;
 }
 
+// remove some weird while-colored block element on the top
+body:before {
+    z-index: 0;
+    display: none !important;
+}
 // remove some extra space on the bottom
 body:after {
     content: '';
