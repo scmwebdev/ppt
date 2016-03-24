@@ -23,6 +23,7 @@ get_header(); ?>
 					foreach ( $pages as $page ) {
 						$title = apply_filters('get_the_title', $page->post_title); 
 						$content = apply_filters('get_the_content', $page->post_content);
+						$excerpt = apply_filters('get_the_excerpt', $page->post_content);
 						$pageId = apply_filters('get_the_ID', $page->ID);
 				?>
 				<div class="jilid-segment clearfix __spacepad">
@@ -35,7 +36,7 @@ get_header(); ?>
 						<h2 class="__nomargin"><?php echo $title; ?></h2>
 					</div>
 					<div class="jilid-segment-desc col-sm-8 __spacepad">
-						<?php echo $content; ?>
+						<?php echo $excerpt.' ...'; ?>
 					</div>
 					<div class="jilid-segment-btn __right">
 						<a href="<?php echo get_page_link($pageId); ?>">
