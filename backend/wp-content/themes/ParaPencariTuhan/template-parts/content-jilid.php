@@ -1,6 +1,9 @@
 <div class="jilid" id="<?php the_title(); ?>">
-	<h2 class="title"><?php the_title(); ?> Video List</h2>
+	<h1>Para Pencari Tuhan - <?php the_title(); ?> </h1>
+	<hr>
+	<h2 class="title">Sinopsis</h2>
 	<p class="desc"><?php the_content(); ?></p>
+	<h2 class="title">Video List</h2>
 	<div class="item row __spacepad">
 		<?php
 			$cat = get_field('category'); 
