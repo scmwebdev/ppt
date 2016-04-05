@@ -46,6 +46,7 @@ get_header(); ?>
 						</a>
 					</div>
 				</div>
+				<hr>
 				<?php } ?>
 			</div>
 		</div>

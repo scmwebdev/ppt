@@ -6,13 +6,15 @@
 	<h2 class="title">Video List</h2>
 	<div class="item row __spacepad">
 		<?php
+			$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 			$cat = get_field('category'); 
 			$args = array (
 				'post_type' => 'post',
 			    'cat' => $cat,
 			    'posts_per_page' => 15,
 			    'orderby' => 'title',
-			    'order' => 'ASC'
+			    'order' => 'ASC',
+			    'paged' => $paged
 			);
 			$the_query = new WP_Query($args); ?>
 
@@ -26,6 +28,19 @@
 					</a>
 				</div>
 			<?php endwhile; ?>
+				<?php
+			      if (function_exists(custom_pagination)) {
+			        custom_pagination($the_query->max_num_pages,"",$paged);
+			      } else {
+			      	echo 'function does not exist!';
+			      }
+			    ?>
+				<?php else: ?>
+			  <article>
+			    <h1>Sorry...</h1>
+			    <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+			  </article>
+
 		<?php endif; ?>
 		<?php wp_reset_query(); ?>
 	</div>
