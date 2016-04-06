@@ -17,7 +17,8 @@ $(document).ready(function() {
         arrows: false,
         swipe: false,
         autoplay: true,
-        adaptiveHeight: true
+        adaptiveHeight: true,
+        autoplaySpeed: 8000,
     });
 
     $('.ads-mobile').slick({
